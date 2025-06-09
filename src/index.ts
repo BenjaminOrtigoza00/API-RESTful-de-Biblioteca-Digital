@@ -10,9 +10,9 @@ const app = express()
 // funcion para configurar las peticiones post
 // permite capturar el json enviado en req.body
 app.use(express.json())
-//aca iba cors supestamente
+//
 
-// quiero borrar un libro
+//
 app.use("/api/books", BooksRoutes)
 
 app.use("",(req, res) => {
@@ -21,6 +21,6 @@ app.use("",(req, res) => {
 })
 
 app.listen(PORT, () =>{ 
-    console.log("Servidor en escucha en el puerto http://localhost:${PORT}")
+    console.log(`Servidor en escucha en el puerto http://localhost:${PORT}`)
     connectDB()
 })
