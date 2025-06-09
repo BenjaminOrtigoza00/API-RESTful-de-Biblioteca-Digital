@@ -1,0 +1,82 @@
+📚 API RESTful de Biblioteca Digital - Versión Mejorada
+Este proyecto es una API RESTful desarrollada con TypeScript, Express y MongoDB. Permite gestionar una colección de libros digitales con funcionalidades completas para crear, leer, actualizar y eliminar (CRUD) registros en la base de datos.
+
+🏗️ Estructura y Diseño
+El proyecto sigue el patrón MVC (Modelo-Vista-Controlador), lo que facilita la escalabilidad y la mantenibilidad del código:
+
+Modelos: Definen la estructura y validaciones de los datos con Mongoose (/models)
+
+Controladores: Contienen la lógica para procesar las solicitudes y preparar respuestas (/controllers)
+
+Rutas: Especifican los endpoints de la API y asignan los controladores correspondientes (/routes)
+
+🛠️ Tecnologías
+Node.js
+
+TypeScript
+
+Express.js
+
+Mongoose (ODM para MongoDB)
+
+ts-node-dev (para entorno de desarrollo con recarga automática)
+
+
+
+
+⚙️ Configuración Inicial
+bash
+Copiar
+Editar
+npm init -y
+
+npm install express mongoose
+
+npm install typescript ts-node-dev @types/express @types/node -D
+
+npx tsc --init
+
+
+
+📦 Scripts para Desarrollo
+Ejecutar servidor en modo desarrollo con recarga automática:
+
+bash
+Copiar
+Editar
+npx ts-node-dev --respawn src/server.ts
+Nota: Asegurate que el archivo principal sea src/server.ts o ajustá el comando a tu archivo de entrada
+
+
+
+📁 Organización del Proyecto
+bash
+Copiar
+Editar
+src/
+├── config/            # Configuración y conexión a la base de datos MongoDB
+├── controllers/       # Lógica para CRUD de libros
+├── models/            # Modelos Mongoose para colección de libros
+├── routes/            # Rutas y endpoints de la API
+└── server.ts          # Archivo principal para iniciar el servidor
+
+
+
+🔌 Endpoints disponibles
+Método	Ruta	Descripción
+GET	/api/books	Obtener listado completo de libros
+GET	/api/books/:id	Obtener un libro por su ID
+POST	/api/books	Crear un nuevo libro
+PUT	/api/books/:id	Reemplazar o actualizar un libro
+DELETE	/api/books/:id	Eliminar un libro por su ID
+
+
+
+🧪 Pruebas
+Para probar esta API podés utilizar herramientas como:
+
+Postman
+
+Insomnia
+
+Thunder Client (extensión de VSCode) 
